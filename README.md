@@ -134,16 +134,3 @@ html_content = """<!DOCTYPE html>
 </body>
 </html>
 """
-
-# Save HTML to a file
-html_file = Path("index.html")
-html_file.write_text(html_content)
-
-# Create a zip file
-with ZipFile("jmscales_website.zip", "w") as zipf:
-    zipf.write(html_file)
-
-# Clean up the temporary HTML file
-html_file.unlink()
-
-print("ZIP file 'jmscales_website.zip' created successfully!")
